@@ -15,6 +15,14 @@ void loadData()
    }
 }
 
+void printProducts()
+{
+  for(Product prod1:products)
+  {
+    println(prod1);
+  }
+}
+
 ArrayList<Product> products = new ArrayList<Product>();
 ArrayList<Product> bill = new ArrayList<Product>();
 

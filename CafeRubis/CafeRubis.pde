@@ -1,3 +1,7 @@
+ArrayList<Product> products = new ArrayList<Product>();
+ArrayList<Product> bill = new ArrayList<Product>();
+float total = 0;
+
 void setup()
 {
    size(800, 600);
@@ -26,22 +30,42 @@ void printProducts()
 
 void displayProducts()
 {
-  for(Product prod1:products)
+  for(Product prod:products)
   {
     float x = 0;
     float y =0;
+    fill(250);
     stroke(200);
     rect(40, 60 ,320, 80);
+    rect(40, 150, 320, 80);
+    rect(40, 240, 320, 80);
+    rect(40, 330, 320, 80);
+    rect(40, 420, 320, 80);
+    
     
   }
 }
 
-ArrayList<Product> products = new ArrayList<Product>();
-ArrayList<Product> bill = new ArrayList<Product>();
+void displayBill()
+{
+  fill(250);
+  rect(440, 60, 300, 480);
+  Product bill = products.get(0);
+  textAlign(CENTER);
+  textSize(40);
+  fill(0);
+  text("Cafe Rubis Till System", 400, 40);
+  textSize(18);
+  text("Your Bill", 590, 90);
+  text("Total:                            €0.00", 580, 500);
+  
+}
 
 void draw()
 {
   stroke(0);
-  line(400, 20, 400, 580);
+  line(400, 50, 400, 580);
   displayProducts();
+  displayBill();
+ 
 }

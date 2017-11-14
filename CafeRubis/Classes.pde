@@ -11,6 +11,6 @@ class Product
   
   String toString()
   {
-    return name + price;
+    return name + "___" + price ;
   }
 }
